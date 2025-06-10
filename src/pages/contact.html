@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - T-Shirt Shop</title>
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <style>
+        .contact {
+            max-width: 500px;
+            margin: 3em auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 2em;
+        }
+        .contact h1 {
+            text-align: center;
+            color: #f7971e;
+            margin-bottom: 0.5em;
+        }
+        .contact p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 2em;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        .contact label {
+            font-weight: bold;
+            color: #222;
+        }
+        .contact input,
+        .contact textarea {
+            padding: 0.7em;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            resize: vertical;
+        }
+        .contact textarea {
+            min-height: 100px;
+        }
+        .contact button {
+            background: #222;
+            color: #fff;
+            border: none;
+            padding: 0.8em 0;
+            border-radius: 6px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact button:hover {
+            background: #f7971e;
+            color: #222;
+        }
+        .site-header, .site-footer {
+            background: #222;
+            color: #fff;
+            padding: 1.5em 0;
+            text-align: center;
+        }
+        .site-header nav {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 2em;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2em;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        @media (max-width: 600px) {
+            .contact { padding: 1em; }
+            .site-header nav { flex-direction: column; gap: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="index.html" class="logo">T-Shirt Shop</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, feel free to reach out to us!</p>
+            <form action="#" method="post" id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="formMessage" style="display:none; color:green; margin-top:1em; text-align:center;">
+                Thank you for contacting us!
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 T-Shirt Shop. All rights reserved.</p>
+    </footer>
+    <script src="../scripts/main.js"></script>
+    <script>
+        // Simple form handler for demo
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('formMessage').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html> 
