@@ -1,0 +1,1 @@
+Se va deschide folderul pages si se va rula index.html care este pagina de home a site-ului 

@@ -1,0 +1,50 @@
+/* Add styles to make the shirt page look like the other pages */
+.shirt-page {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 32px 24px;
+}
+
+.shirt-page img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    background: #eee;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shirt-page .shirt-title {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.shirt-page .shirt-price {
+    color: #1a7f37;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.shirt-page .shirt-description {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.shirt-page .btn, .shirt-page button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+}
